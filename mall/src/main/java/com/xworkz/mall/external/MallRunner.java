@@ -10,10 +10,10 @@ public class MallRunner {
        EntityManager entityManager=entityManagerFactory.createEntityManager();
        EntityTransaction entityTransaction =entityManager.getTransaction();
         entityTransaction.begin();
-        MallDetails mallDetails=new MallDetails(38,"mak",8877996565l,"mark@123");
+        MallDetails mallDetails=new MallDetails(100,"mak",8877996565l,"mark@123");
         entityManager.persist(mallDetails);
         entityTransaction.commit();
-       MallDetails entity= entityManager.find(MallDetails.class,38);
+       MallDetails entity= entityManager.find(MallDetails.class,100);
 
         System.out.println(entity.toString());
         entityManager.close();
